@@ -1,24 +1,44 @@
 html, body {
 	height: 100%;
 	position: relative;
+	background-image: url('../assets/img/page_background.png');
 }
 
 .section {
 	position: relative;
     overflow: hidden;
-    min-height: 350px;
     padding-top: 50px;
+    min-height: 350px;
     padding-bottom: 60px;
     text-align: center;
-    background: #fff;
 	
 }
 
+.content {
+	background: rgba(255, 255, 255, 0.75);
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+/*************************************************************************************************
+* Google Maps defined sizes
+*************************************************************************************************/
+#map-AH,#map-PL,#map-PL1,#map-TL,#map-CL,#map-CP,#map-GH,
+#map-PMT,#map-PMN,#map-MH,#map-OM,#map-TWL,#map-IL,#map-TH{
+  height: 350px;
+}
+
+
+/*************************************************************************************************
+* Landing Home Page
+*************************************************************************************************/
 #overview .section {
-	/* background-image: url('../assets/img/bgsection2.jpg'); */
-	background:#ffffff;
-	background-repeat: no-repeat;
-	background-position: center;
+	background-image: url('../assets/img/bgsection2.jpg');
+	/* background:#ffffff; */
+	background-size:cover;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 #overview .content {
@@ -32,8 +52,9 @@ html, body {
 #location .section {
 	background-image: url('../assets/img/bgheaderwrap.jpg');
 	/* background:#000000; */
-	background-repeat: no-repeat;
-	background-position: center;
+	background-size:cover;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 #location .content {
@@ -44,22 +65,32 @@ html, body {
 }
 
 #theme .section {
-	/* background-image: url('../assets/img/bgsection2.jpg'); */
-	background:#ffffff;
-	background-repeat: no-repeat;
-	background-position: center;
+	background-image: url('../assets/img/bgsection2.jpg');
+	/* background:#ffffff; */
+	background-size:cover;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 #theme .content {
 	background: rgba(255, 255, 255, 0.75);
 	border-radius: 3px;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	padding-right: 60px;
+}
+
+#theme .content li:nth-child(even) {
+	background-color: #cccccc;
+}
+#theme .content li:nth-child(odd) {
+	/* background-color: #337ab7; */
 }
 
 #announcements .section {
 	background-image: url('../assets/img/bgheaderwrap.jpg');
-	background-repeat:no-repeat;
-	background-position:center;
+	background-size:cover;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 #announcements .content {
@@ -71,6 +102,150 @@ html, body {
 #announcements .section .panel-body {
 	font-weight:bold;
 }
+
+
+
+/*************************************************************************************************
+* Info Page - Call for Papers, Author Guidelines, Completed Papers, e.t.c
+*************************************************************************************************/
+#body_container_info .content {
+	background: rgba(255, 255, 255, 0.75);
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	margin-top:40px;
+	margin-bottom:40px;
+	padding:30px;
+} 
+#body_container_info .section {
+	/* background-color:#00000f; */
+	padding: 10px;
+	min-height:0;
+}
+#call_for_papers .text_section p{
+	text-align:justify;
+}
+#call_for_papers .text_section h2{
+	background-color:yellow;
+	border-radius: 8px;
+}
+#author_guidelines .text_section p{
+	text-align:justify;
+}
+#author_guidelines .text_section h2{
+	background-color:yellow;
+	border-radius: 8px;
+}
+#author_guidelines .text_section li {
+	text-align:left;
+}
+#completed_papers .text_section p{
+	text-align:justify;
+}
+#completed_papers .text_section h2{
+	background-color:yellow;
+	border-radius: 8px;
+}
+#individual_meetings .text_section p{
+	text-align:justify;
+}
+#individual_meetings .text_section h2{
+	background-color:yellow;
+	border-radius: 8px;
+}
+#important_dates {
+	margin-top:40px;
+	/* margin-left:20%;
+	margin-right:20%; */
+}
+#important_dates table, th, td {
+	border: 1px solid black;
+}
+#important_dates tr:nth-child(even) {
+	background-color: #cccccc;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+#important_dates .content tr:nth-child(odd) {
+	/* background-color: #337ab7; */
+}
+table, th, td {
+	width: 600px;
+}
+
+
+/*************************************************************************************************
+* Registration Page
+/*************************************************************************************************/
+#body_register .content {
+	background: rgba(255, 255, 255, 0.75);
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	margin-top:40px;
+	margin-bottom:40px;
+	padding:30px;
+}
+#body_register .section {
+	/* background-color:#00000f; */
+	padding: 10px;
+	min-height:500px;
+}
+#body_register #reg_manager {
+	margin:auto;
+	margin-top:100px;
+	width:300px;
+	padding-bottom:50px;
+}
+
+
+/*************************************************************************************************
+* Accomodations Page
+/*************************************************************************************************/
+#body_acmd .content {
+	background: rgba(255, 255, 255, 0.75);
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	margin-top:20px;
+	margin-bottom:20px;
+	padding:20px;
+}
+#body_acmd .section {
+	/* background-color:#00000f; */
+	padding: 10px;
+	min-height:0;
+}
+#body_acmd .acmd_details {
+	margin-top:5%;
+	margin-bottom:5%;
+	color:green;
+}
+
+
+
+/*************************************************************************************************
+* Contacts Page
+/*************************************************************************************************/
+#body_contact .content {
+	background: rgba(255, 255, 255, 0.75);
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	margin-top:40px;
+	margin-bottom:40px;
+	padding:30px;
+}
+#body_contact .section {
+	/* background-color:#00000f; */
+	padding: 10px;
+	min-height:0;
+	padding-bottom:100px;
+}
+.col-xs-6, .col-sm-6{
+	margin-top:30px;
+}
+
+
+
+/*************************************************************************************************
+* The Extras
+*************************************************************************************************/
 
 /* Horizontal Lines */
 .hline {
@@ -89,12 +264,12 @@ html, body {
 
 /* Header */
 #headerwrap {
-	/* background-color: #6666ff; */
+	background-color: #6666ff;
 	color:white;
-	background-image: url('../assets/img/bgheaderwrap.jpg');
-	background-repeat:no-repeat;
+	/* background-image: url('../assets/img/bgheaderwrap.jpg'); */
+	background-repeat: repeat-x;
 	background-position:center;
-	min-height: 0px;
+	min-height: 470px;
 	padding-top: 100px;
 	padding-bottom: 50px;
 	text-align: center;
@@ -115,16 +290,19 @@ html, body {
 	color: #bfc9d3;
 }
 
-#footerwrap h4 {
+#footerwrap h4,h6 {
 	color: #ffffff;
 }
 
-#footerwrap i {
-	font-size: 30px;
-	color: #bfc9d3;
-	padding-right: 25px;
+#footerwrap h6 {
+	margin-top:40px;
 }
 
-#footerwrap i:hover {
-	color: #6666ff
+#footerwrap a:hover {
+	color: orange;
+}
+
+.popover {
+    background: #384452;
+	color: #ffffff;
 }
